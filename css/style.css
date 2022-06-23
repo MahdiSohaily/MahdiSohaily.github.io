@@ -1,0 +1,25 @@
+
+body {
+    font-family:"Audiowide", sans-serif;
+  }
+#main {
+    width: 95%;
+    height: 100vh;
+    margin: 30px auto;
+    background: linear-gradient(to bottom,skyblue, white );
+    border-radius: 10px;
+    padding: 20px;
+}
+#image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
+#title, #img-caption {
+    text-align: center;
+}
+#tribute-info{
+    text-align: justify;
+}

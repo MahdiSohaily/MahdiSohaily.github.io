@@ -75,12 +75,16 @@ body {
     width: 300px;
 }
 
+img {
+  border-radius: 10px;
+}
+
 .desc {
     padding: 20px 0;
 }
 
 h2 {
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: 700;
     color: var(--dark-blue);
     text-align: center;

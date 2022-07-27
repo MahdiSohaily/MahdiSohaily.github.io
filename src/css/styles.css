@@ -80,10 +80,10 @@ img {
 }
 
 .desc {
-    padding: 20px 0;
+    padding: 25px 0;
 }
 
-h2 {
+h1 {
     font-size: 1.4em;
     font-weight: 700;
     color: var(--dark-blue);

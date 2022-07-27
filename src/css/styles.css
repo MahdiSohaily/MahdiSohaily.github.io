@@ -37,7 +37,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: var(--blue);
+  background-color: var(--light-gray);
 }
 
 /* A elements that don't have a class get default styles */
@@ -88,7 +88,7 @@ h2 {
  p {
     padding-top: 15px;
     text-align: center;
-    color: var(--light-gray);
+    color: var(--blue);
  }
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {

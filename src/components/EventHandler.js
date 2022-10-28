@@ -6,6 +6,10 @@ class EventHandler extends React.Component {
     this.state = { state: 'active' };
   }
 
+  static getDerivedStateFromProps(props, state) {
+
+  }
+
   static getD
   render() {
     return <button onClick={this.alertMessage}>Click</button>;

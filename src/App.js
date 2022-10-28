@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Clock />
-      <EventHandler />
+      <EventHandler data="practice" />
     </>
   );
 }

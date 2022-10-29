@@ -19,7 +19,11 @@ export default class Message extends Component {
   render() {
     return (
       <form>
-        <textarea value={this.name} onChange={this.handleChange} />
+        <select value={this.state.name} onChange={this.handleChange}>
+          <option value="Ford">Ford</option>
+          <option value="Volvo">Volvo</option>
+          <option value="Fiat">Fiat</option>
+        </select>
       </form>
     );
   }

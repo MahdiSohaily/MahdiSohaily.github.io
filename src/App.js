@@ -4,18 +4,32 @@ import Button from './components/Button';
 import './styles/App.css';
 
 class App extends Component {
-  state = { date: new Date() };
-
-  changeCondition() {
-    console.log(this.state.date);
+  constructor(props) {
+    super(props);
+    this.state = { isLogin: false };
   }
+
+  // componentDidMount() {
+  //   this.timerID = setInterval(() => this.tick(), 1000);
+  // }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick = () => {
+    this.setState({
+      isLogin: true,
+    });
+  };
 
   render() {
     return (
-      <>
+      <div>
+        <h1>Hello, world!</h1>
         {this.state.isLogin && <Message />}
-        <Button title="change state" handleState={this.changeCondition} />
-      </>
+        <Button title="change state" handleState={this.tick} />
+      </div>
     );
   }
 }

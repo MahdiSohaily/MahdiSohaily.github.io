@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Message() {
   return (
-    <div>Message</div>
+    <div>You are not logged in</div>
   )
 }

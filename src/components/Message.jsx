@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 export default function Message() {
+  const [name, setName] = useState('');
+
+  const handleChange = (e) => {
+    setName(e.target.value);
+  };
   return (
-    <div>You are not logged in</div>
-  )
+    <form>
+      <input type="test" name="username" value={name} onChange={handleChange} />
+    </form>
+  );
 }

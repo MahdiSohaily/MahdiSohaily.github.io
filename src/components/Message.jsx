@@ -1,14 +1,31 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 
-export default function Message() {
-  const [name, setName] = useState('');
+export default class Message extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+    };
+  }
 
-  const handleChange = (e) => {
-    setName(e.target.value);
+  handleChange = (e) => {
+    this.setState({ name: e.target.value });
   };
-  return (
-    <form>
-      <input type="test" name="username" value={name} onChange={handleChange} />
-    </form>
-  );
+
+  componentDidUpdate() {
+    console.log('updated');
+  }
+
+  render() {
+    return (
+      <form>
+        <input
+          type="test"
+          name="username"
+          value={this.state.name}
+          onChange={this.handleChange}
+        />
+      </form>
+    );
+  }
 }

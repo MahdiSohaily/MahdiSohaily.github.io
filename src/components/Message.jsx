@@ -19,12 +19,7 @@ export default class Message extends Component {
   render() {
     return (
       <form>
-        <input
-          type="test"
-          name="username"
-          value={this.state.name}
-          onChange={this.handleChange}
-        />
+        <textarea value={this.name} onChange={this.handleChange} />
       </form>
     );
   }

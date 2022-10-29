@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
+import Message from './components/Message';
+import Button from './components/Button';
 import './styles/App.css';
-import Clock from './components/Clock';
-import EventHandler from './components/EventHandler';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLogin: false,
-    };
+  state = { date: new Date() };
+
+  changeCondition() {
+    console.log(this.state.date);
   }
 
   render() {
     return (
       <>
-        <Clock />
-        <EventHandler data="practice" />
+        {this.state.isLogin && <Message />}
+        <Button title="change state" handleState={this.changeCondition} />
       </>
     );
   }

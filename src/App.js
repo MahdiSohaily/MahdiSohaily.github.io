@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Message from './components/Message';
 import Button from './components/Button';
+import Dashboard from './components/Dashboard';
 import './styles/App.css';
 
 class App extends Component {
@@ -27,7 +28,7 @@ class App extends Component {
     return (
       <div>
         <h1>Hello, world!</h1>
-        {this.state.isLogin && <Message />}
+        {this.state.isLogin ? <Dashboard /> : <Message />}
         <Button title="change state" handleState={this.tick} />
       </div>
     );

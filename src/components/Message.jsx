@@ -4,7 +4,7 @@ export default class Message extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
+      name: 'This is a textarea example in the React Library',
     };
   }
 

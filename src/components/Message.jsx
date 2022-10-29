@@ -12,8 +12,8 @@ export default class Message extends Component {
     this.setState({ name: e.target.value });
   };
 
-  componentDidUpdate() {
-    console.log('updated');
+  componentDidUpdate(props, state) {
+    console.log(state.name);
   }
 
   render() {

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Message from './components/Message';
-import Button from './components/Button';
-import Dashboard from './components/Dashboard';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';

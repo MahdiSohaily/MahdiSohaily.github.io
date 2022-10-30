@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <React.Fragment>
       <div>contact</div>
-     
+      <ul>{display}</ul>
     </React.Fragment>
   );
 }

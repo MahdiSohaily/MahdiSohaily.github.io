@@ -43,8 +43,6 @@ class App extends Component {
             </Route>
           </Routes>
         </BrowserRouter>
-        {this.state.isLogin ? <Dashboard /> : <Message />}
-        <Button title="change state" handleState={this.tick} />
       </div>
     );
   }

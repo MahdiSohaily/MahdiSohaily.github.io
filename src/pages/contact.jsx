@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 export default function Contact() {
+  const address = ['afghanistan', 'kabul', 'brchi', 'shahrak-e-jafariea'];
+  const display =
   return (
-    <div>contact</div>
-  )
+    <React.Fragment>
+      <div>contact</div>
+
+    </React.Fragment>
+  );
 }

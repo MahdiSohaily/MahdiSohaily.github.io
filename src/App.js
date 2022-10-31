@@ -25,18 +25,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="blogs" element={<About />} />
-              <Route path="contact" element={<Contact />} />
-              <Route path="*" element={<NoPage />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </div>
+
     );
   }
 }

@@ -13,10 +13,6 @@ class App extends Component {
     this.state = { isLogin: false };
   }
 
-  // componentDidMount() {
-  //   this.timerID = setInterval(() => this.tick(), 1000);
-  // }
-
   componentWillUnmount() {
     clearInterval(this.timerID);
   }

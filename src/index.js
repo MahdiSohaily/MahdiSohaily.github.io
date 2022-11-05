@@ -15,11 +15,15 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((response) => response.json())
       .then((post) => {
         setPost(post.title);
-        setToast({ type: 'success', message: 'Data received successfully' });
+        setToast({
+          type: 'success',
+          message: `${post.id}-Data received successfully`,
+        });
         setLoading(false);
       });
   }, [id]);
@@ -34,9 +38,10 @@ export default function App() {
           Post ID:
           <input
             id="post_id"
-            type="test"
+            type="number"
             name="post_id"
             value={id}
+            min={1}
             onChange={(e) => {
               setID(e.target.value);
             }}

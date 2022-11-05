@@ -11,31 +11,34 @@ export default function App() {
   });
 
   const [post, setPost] = useState('');
+  const [id, setID] = useState(1);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts/1')
+    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((response) => response.json())
       .then((post) => {
         setPost(post.title);
         setToast({ type: 'success', message: 'Data received successfully' });
         setLoading(false);
       });
-  });
+  }, [id]);
+
   return (
     <div>
       <div>
         <h1> {post}</h1>
       </div>
       <div>
-        <label for>
+        <label htmlFor="post_id">
           Post ID:
           <input
+            id="post_id"
             type="test"
-            name="post_is"
-            value={post}
+            name="post_id"
+            value={id}
             onChange={(e) => {
-              setPost(e.target.value);
+              setID(e.target.value);
             }}
           />
         </label>

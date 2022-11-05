@@ -1,7 +1,13 @@
-import ReactDOM from "react-dom/client";
+import ReactDOM from 'react-dom/client';
+import Loading from './components/Loading';
+import './styles/index.css';
 
 export default function App() {
-  return ( <h1>Hello world</h1>);
+  return (
+    <div className='center'>
+      <Loading />
+    </div>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

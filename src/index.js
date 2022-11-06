@@ -10,18 +10,19 @@ export default function App() {
     message: '',
   });
 
-  function userAction(type) {
+  function userAction(type, payload) {
     switch (type) {
       case 'get-data':
-        setPost(post.title);
+        console.log(payload);
+        setPost(payload.title);
         setLoading(false);
         setToast({
           type: 'success',
-          message: `${post.id}-Data received successfully`,
+          message: `${payload.id}-Data received successfully`,
         });
         break;
       case 'set_Id':
-        setID(e.target.value);
+        setID(payload);
         setLoading(true);
         break;
       default:
@@ -36,12 +37,12 @@ export default function App() {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((response) => response.json())
       .then((post) => {
-        userAction('get-data');
+        userAction('get-data', { title: post.title, id: post.id });
       });
-  }, [id, userAction]);
+  }, [id]);
 
   function handlePostId(e) {
-    userAction('set_Id');
+    userAction('set_Id',e.target.value);
   }
 
   return (

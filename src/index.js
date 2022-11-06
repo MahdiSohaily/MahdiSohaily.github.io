@@ -13,8 +13,16 @@ export default function App() {
   function userAction(type) {
     switch (type) {
       case 'get-data':
+        setPost(post.title);
+        setLoading(false);
+        setToast({
+          type: 'success',
+          message: `${post.id}-Data received successfully`,
+        });
         break;
-      case '':
+      case 'set_Id':
+        setID(e.target.value);
+        setLoading(true);
         break;
       default:
     }
@@ -28,18 +36,12 @@ export default function App() {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((response) => response.json())
       .then((post) => {
-        setPost(post.title);
-        setToast({
-          type: 'success',
-          message: `${post.id}-Data received successfully`,
-        });
-        setLoading(false);
+        userAction('get-data');
       });
-  }, [id]);
+  }, [id, userAction]);
 
   function handlePostId(e) {
-    setID(e.target.value);
-    setLoading(true);
+    userAction('set_Id');
   }
 
   return (

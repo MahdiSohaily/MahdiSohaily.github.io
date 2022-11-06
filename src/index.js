@@ -35,6 +35,7 @@ function reducer(state, action) {
         loading: true,
       };
     default:
+      return state;
   }
 }
 

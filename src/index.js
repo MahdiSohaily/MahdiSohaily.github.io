@@ -16,7 +16,7 @@ function reducer(state, action) {
     case 'get-data':
       return {
         ...state,
-        title: action.title,
+        post: action.title,
         loading: false,
         tost: {
           type: 'success',

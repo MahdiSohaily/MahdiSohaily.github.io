@@ -1,15 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useReducer, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import Loading from './components/Loading/';
 import Toast from './components/Toast/';
 import './styles/index.css';
 
-export default function App() {
-  const [toast, setToast] = useState({
-    typeof: 'info',
-    message: '',
-  });
+const initState = {
+  tost : {type : 'info', message : ''},
+  post: '',
+  id:1,
+  loading: true,
+}
 
+export default function App() {
   function userAction(type, payload) {
     switch (type) {
       case 'get-data':
@@ -29,9 +31,6 @@ export default function App() {
     }
   }
 
-  const [post, setPost] = useState('');
-  const [id, setID] = useState(1);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)

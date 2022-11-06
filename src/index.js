@@ -10,12 +10,21 @@ export default function App() {
     message: '',
   });
 
+  function userAction(type) {
+    switch (type) {
+      case 'get-data':
+        break;
+      case '':
+        break;
+      default:
+    }
+  }
+
   const [post, setPost] = useState('');
   const [id, setID] = useState(1);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((response) => response.json())
       .then((post) => {
@@ -27,6 +36,11 @@ export default function App() {
         setLoading(false);
       });
   }, [id]);
+
+  function handlePostId(e) {
+    setID(e.target.value);
+    setLoading(true);
+  }
 
   return (
     <div>
@@ -42,9 +56,7 @@ export default function App() {
             name="post_id"
             value={id}
             min={1}
-            onChange={(e) => {
-              setID(e.target.value);
-            }}
+            onChange={handlePostId}
           />
         </label>
       </div>

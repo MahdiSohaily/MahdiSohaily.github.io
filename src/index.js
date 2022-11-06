@@ -11,9 +11,14 @@ const initState = {
   loading: true,
 };
 
+const Actions = {
+  GET_DATA: 'get-data',
+  SET_DATA: 'set_Id',
+};
+
 function reducer(state, action) {
   switch (action.type) {
-    case 'get-data':
+    case Actions.GET_DATA:
       return {
         ...state,
         post: action.title,
@@ -23,7 +28,7 @@ function reducer(state, action) {
           message: `${action.id}-Data received successfully`,
         },
       };
-    case 'set_Id':
+    case Actions.SET_DATA:
       return {
         ...state,
         id: action.id,

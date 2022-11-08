@@ -1,84 +1,17 @@
-import { useReducer, useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Loading from './components/Loading/';
-import Toast from './components/Toast/';
-import './styles/index.css';
-
-const initState = {
-  tost: { type: 'info', message: '' },
-  post: '',
-  id: 1,
-  loading: true,
-};
-
-const Actions = {
-  GET_DATA: 'get-data',
-  SET_DATA: 'set_Id',
-};
-
-function reducer(state, action) {
-  switch (action.type) {
-    case Actions.GET_DATA:
-      return {
-        ...state,
-        post: action.title,
-        loading: false,
-        tost: {
-          type: 'success',
-          message: `${action.id}-Data received successfully`,
-        },
-      };
-    case Actions.SET_DATA:
-      return {
-        ...state,
-        id: action.id,
-        loading: true,
-      };
-    default:
-      return state;
-  }
-}
-
-export default function App() {
-  const [{ tost, id, loading, post }, dispatch] = useReducer(
-    reducer,
-    initState
-  );
-  useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-      .then((response) => response.json())
-      .then((post) => {
-        dispatch({ type: 'get-data', title: post.title, id: post.id });
-      });
-  }, [id]);
-
-  function handlePostId(e) {
-    dispatch({ type: 'set_Id', id: e.target.value });
-  }
-
-  return (
-    <div>
-      <div>
-        <h1> {post}</h1>
-      </div>
-      <div>
-        <label htmlFor="post_id">
-          Post ID:
-          <input
-            id="post_id"
-            type="number"
-            name="post_id"
-            value={id}
-            min={1}
-            onChange={handlePostId}
-          />
-        </label>
-      </div>
-      {loading && <Loading />}
-      <Toast type={tost.type} message={tost.message} />
-    </div>
-  );
-}
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Aside from './Aside';
+import Boxes from './Boxes';
 
 export default class Main extends Component {
   state = {
@@ -31,6 +32,7 @@ export default class Main extends Component {
     return (
       <>
         <Aside items={this.state.toggle} toggler={this.toggler} />
+        <Boxes items={this.state.toggle} />
       </>
     );
   }

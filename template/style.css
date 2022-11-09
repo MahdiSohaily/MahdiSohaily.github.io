@@ -1,0 +1,79 @@
+.toggle-control {
+    display: block;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+.toggle-control input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.toggle-control input:checked~.control {
+    background-color: dodgerblue;
+}
+
+.toggle-control input:checked~.control:after {
+    left: 30px;
+}
+
+.toggle-control .control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 50px;
+    border-radius: 12.5px;
+    background-color: darkgray;
+    transition: background-color 0.15s ease-in;
+}
+
+.toggle-control .control:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 12.5px;
+    background: white;
+    transition: left 0.15s ease-in;
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #20232a;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.toggle {
+    margin: 20px 0px;
+    display: flex;
+    min-width: 130px;
+    justify-content: space-around;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    margin: 15px;
+    border-radius: 10px;
+    color: #007bec;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#root {
+    display: flex;
+}

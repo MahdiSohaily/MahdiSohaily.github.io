@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Aside from './Aside';
-import Box from './Box';
-import Toggle from './Toggle';
 
 export default class Main extends Component {
   state = {
@@ -33,11 +31,6 @@ export default class Main extends Component {
     return (
       <>
         <Aside items={this.state.toggle} toggler={this.toggler} />
-        <div className="box-wrapper">
-          {this.state.toggle.map(
-            (item) => item.checked && <Box key={item.id} title={item.title} />
-          )}
-        </div>
       </>
     );
   }

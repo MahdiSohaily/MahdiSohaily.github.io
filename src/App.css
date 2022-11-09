@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+.toggle-control {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.toggle-control input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.toggle-control input:checked~.control {
+  background-color: dodgerblue;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.toggle-control input:checked~.control:after {
+  left: 30px;
+}
+
+.toggle-control .control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 50px;
+  border-radius: 12.5px;
+  background-color: darkgray;
+  transition: background-color 0.15s ease-in;
+}
+
+.toggle-control .control:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 12.5px;
+  background: white;
+  transition: left 0.15s ease-in;
+}
+
+
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  background-color: #20232a;
   color: white;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-.App-link {
-  color: #61dafb;
+.toggle {
+  margin: 20px 0px;
+  display: flex;
+  min-width: 130px;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: #ffffff;
+  margin: 15px;
+  border-radius: 10px;
+  color: #007bec;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#root {
+  display: flex;
 }

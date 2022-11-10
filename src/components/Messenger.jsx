@@ -22,6 +22,10 @@ export default class Messenger extends Component {
         time: '11:40:10 am',
       },
     ],
+    users: {
+      sender: 'https://bootdey.com/img/Content/avatar/avatar1.png',
+      receiver: 'https://bootdey.com/img/Content/avatar/avatar2.png'
+    }
   };
   render() {
     return (

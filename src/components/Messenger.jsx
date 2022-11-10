@@ -28,9 +28,17 @@ export default class Messenger extends Component {
     },
   };
 
-  handleChat(message) {
-    console.log(message);
-  }
+  handleChat = (message) => {
+    const chats = [...this.state.chatList];
+    chats.push({
+      message,
+      type: 'send',
+      time: 'just now',
+    });
+    this.setState({
+      chatList: chats,
+    });
+  };
 
   render() {
     return (

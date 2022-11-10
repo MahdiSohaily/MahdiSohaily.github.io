@@ -8,6 +8,9 @@ export default class Footer extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.handleChat(this.state.input);
+    this.setState({
+      input: '',
+    });
   };
   render() {
     return (

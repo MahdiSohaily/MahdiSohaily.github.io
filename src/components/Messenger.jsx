@@ -30,10 +30,12 @@ export default class Messenger extends Component {
 
   handleChat = (message) => {
     const chats = [...this.state.chatList];
+    const timing = new Date();
+    var ampm = timing.getHours() >= 12 ? 'pm' : 'am';
     chats.push({
       message,
       type: 'send',
-      time: 'just now',
+      time: `${timing.getHours()}:${timing.getMinutes()}:${timing.getSeconds()} ${ampm}`,
     });
     this.setState({
       chatList: chats,

@@ -33,7 +33,7 @@ export default class Messenger extends Component {
         <div class="col-md-7 col-xs-12 col-md-offset-2">
           <div class="panel" id="chat">
             <Heading heading="chat" />
-            <Body />
+            <Body chatList={this.state.chatList} users={this.state.users} />
             <Footer />
           </div>
         </div>

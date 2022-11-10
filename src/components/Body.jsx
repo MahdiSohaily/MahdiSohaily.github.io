@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Body() {
+export default function Body({}) {
   return (
     <div class="panel-body">
     <div class="chats">
@@ -9,7 +9,7 @@ export default function Body() {
           <a
             class="avatar avatar-online"
             data-toggle="tooltip"
-            href="#"
+            href="#top"
             data-placement="right"
             title=""
             data-original-title="June Lane"
@@ -39,7 +39,7 @@ export default function Body() {
           <a
             class="avatar avatar-online"
             data-toggle="tooltip"
-            href="#"
+            href="#top"
             data-placement="left"
             title=""
             data-original-title="Edward Fletcher"
@@ -65,7 +65,7 @@ export default function Body() {
           <a
             class="avatar avatar-online"
             data-toggle="tooltip"
-            href="#"
+            href="#top"
             data-placement="right"
             title=""
             data-original-title="June Lane"

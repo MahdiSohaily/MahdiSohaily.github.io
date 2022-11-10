@@ -24,15 +24,15 @@ export default class Messenger extends Component {
     ],
     users: {
       sender: 'https://bootdey.com/img/Content/avatar/avatar1.png',
-      receiver: 'https://bootdey.com/img/Content/avatar/avatar2.png'
-    }
+      receiver: 'https://bootdey.com/img/Content/avatar/avatar2.png',
+    },
   };
   render() {
     return (
       <div class="container bootstrap snippets">
         <div class="col-md-7 col-xs-12 col-md-offset-2">
           <div class="panel" id="chat">
-            <Heading />
+            <Heading heading="chat" />
             <Body />
             <Footer />
           </div>

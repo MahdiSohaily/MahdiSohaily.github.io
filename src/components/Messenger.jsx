@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Body from './Body';
+import Footer from './Footer';
 import Heading from './Heading';
 
 export default class Messenger extends Component {
@@ -10,7 +11,7 @@ export default class Messenger extends Component {
           <div class="panel" id="chat">
            <Heading />
             <Body />
-            
+            <Footer />
           </div>
         </div>
       </div>

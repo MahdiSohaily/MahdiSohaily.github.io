@@ -10,22 +10,7 @@ export default class Messenger extends Component {
           <div class="panel" id="chat">
            <Heading />
             <Body />
-            <div class="panel-footer">
-              <form>
-                <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Say something"
-                  />
-                  <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button">
-                      Send
-                    </button>
-                  </span>
-                </div>
-              </form>
-            </div>
+            
           </div>
         </div>
       </div>

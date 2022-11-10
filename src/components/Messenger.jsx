@@ -29,9 +29,9 @@ export default class Messenger extends Component {
   };
   render() {
     return (
-      <div class="container bootstrap snippets">
-        <div class="col-md-7 col-xs-12 col-md-offset-2">
-          <div class="panel" id="chat">
+      <div className="container bootstrap snippets">
+        <div className="col-md-7 col-xs-12 col-md-offset-2">
+          <div className="panel" id="chat">
             <Heading heading="chat" />
             <Body chatList={this.state.chatList} users={this.state.users} />
             <Footer />

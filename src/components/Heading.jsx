@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Heading({ heading }) {
   return (
-    <div class="panel-heading">
-      <h3 class="panel-title">
-        <i class="icon wb-chat-text" aria-hidden="true"></i> {heading}
+    <div className="panel-heading">
+      <h3 className="panel-title">
+        <i className="icon wb-chat-text" aria-hidden="true"></i> {heading}
       </h3>
     </div>
   );

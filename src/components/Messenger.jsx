@@ -31,11 +31,21 @@ export default class Messenger extends Component {
   handleChat = (message) => {
     const chats = [...this.state.chatList];
     const timing = new Date();
+    const Hour =
+      timing.getHours() < 10 ? `0${timing.getHours()}` : timing.getHours();
+    const Minute =
+      timing.getMinutes() < 10
+        ? `0${timing.getMinutes()}`
+        : timing.getMinutes();
+    const Second =
+      timing.getSeconds() < 10
+        ? `0${timing.getSeconds()}`
+        : timing.getSeconds();
     var ampm = timing.getHours() >= 12 ? 'pm' : 'am';
     chats.push({
       message,
       type: 'send',
-      time: `${timing.getHours()}:${timing.getMinutes()}:${timing.getSeconds()} ${ampm}`,
+      time: `${Hour}:${Minute}:${Second} ${ampm}`,
     });
     this.setState({
       chatList: chats,

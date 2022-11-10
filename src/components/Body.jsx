@@ -3,7 +3,6 @@ import Chat from './Chat';
 
 export default function Body(props) {
   const chats = props.chatList.map((item, index) => {
-    console.log(item.type);
     return <Chat key={index} chat={item} users={props.users} />;
   });
   return (

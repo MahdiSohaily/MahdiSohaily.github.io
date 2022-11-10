@@ -27,6 +27,11 @@ export default class Messenger extends Component {
       receiver: 'https://bootdey.com/img/Content/avatar/avatar2.png',
     },
   };
+
+  handleChat(message) {
+    console.log(message);
+  }
+
   render() {
     return (
       <div className="container bootstrap snippets">
@@ -34,7 +39,7 @@ export default class Messenger extends Component {
           <div className="panel" id="chat">
             <Heading heading="chat" />
             <Body chatList={this.state.chatList} users={this.state.users} />
-            <Footer />
+            <Footer handleChat={this.handleChat} />
           </div>
         </div>
       </div>

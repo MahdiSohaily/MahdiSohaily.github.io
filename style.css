@@ -4,9 +4,22 @@
 
 .nav {
   position: fixed;
-  width: 80px;
   top: 0;
   right: 0;
   bottom: 0;
   border-left: 3px solid var(--clr-light-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  padding: 30px;
 }

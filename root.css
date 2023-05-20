@@ -1,0 +1,39 @@
+:root {
+  --clr-white: #fefefe;
+  --clr-black: #1f1f1f;
+  --clr-light-gray: #f2f2f2;
+  --clr-dark-gray: #999999;
+  --clr-semi-dark-gray: #6d6d6d;
+
+  --ff-primary: "Barlow Semi Condensed", sans-serif;
+  --ff-heading: var(--ff-primary);
+  --ff-body: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-200: 0.57rem;
+  --fs-300: 0.87rem;
+  --fs-400: 1rem;
+  --fs-500: 1.2rem;
+  --fs-600: 2rem;
+  --fs-700: 2.5rem;
+  --fs-800: 2.8rem;
+  --fs-900: 3.2rem;
+
+  --fs-button: var(--fs-200);
+  --fs-body: var(--fs-300);
+  --fs-nav: var(--fs-400);
+  --fs-primary-heading: var(--fs-800);
+  --fs-secondary-heading: var(--fs-700);
+}
+
+@media screen and (min-width: 50em) {
+  :root {
+    --fs-600: 2.5rem;
+    --fs-700: 3.5rem;
+    --fs-primary-heading: var(--fs-900);
+    --fs-secondary-heading: var(--fs-800);
+  }
+}

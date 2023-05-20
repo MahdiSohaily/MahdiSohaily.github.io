@@ -13,11 +13,16 @@
   --fw-semi-bold: 500;
   --fw-bold: 700;
 
-  --fs-300: 0.8rem;
+  --fs-200: 0.57rem;
+  --fs-300: 0.87rem;
   --fs-400: 1rem;
-  --fs-500: 1.5rem;
+  --fs-500: 1.2rem;
   --fs-600: 2rem;
   --fs-700: 2.5rem;
+
+  --fs-button: var(--fs-200);
+  --fs-body: var(--fs-300);
+  --fs-nav: var(--fs-400);
 }
 
 @media screen and (min-width: 50em) {

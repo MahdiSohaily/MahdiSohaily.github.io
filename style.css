@@ -20,17 +20,18 @@
 .desktop-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.7rem;
   padding-inline: 2.5rem;
 }
 
-.desktop-menu ol {
+ol {
   counter-reset: item;
+  font-size: var(--fs-300);
 }
 .desktop-menu ol li {
   display: block;
 }
-.desktop-menu ol li:before {
+ ol li:before {
   content: "0" counter(item) ". ";
   counter-increment: item;
   color: var(--green);
@@ -41,7 +42,6 @@
 }
 
 .desktop-menu li a {
-  padding-inline: 5px;
   color: var(--lightest-slate);
 }
 
@@ -53,8 +53,9 @@
 .resume {
   border: 1px solid var(--green);
   border-radius: 5px;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
   color: var(--green);
+  font-size: var(--fs-300);
 }
 
 /* social icons style */
@@ -96,5 +97,5 @@
 
 .email a {
   color: var(--lightest-slate);
-  font-size: var(--fs-400);
+  font-size: var(--fs-300);
 }

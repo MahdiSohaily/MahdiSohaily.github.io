@@ -3,7 +3,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: var(--ff-body);
+  font-family: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
+  ;
 }
 
 /* Remove default margin */

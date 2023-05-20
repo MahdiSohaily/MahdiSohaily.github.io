@@ -18,6 +18,8 @@
   --ff-heading: var(--ff-primary);
   --ff-body: var(--ff-primary);
 
+  --nav-height: 100px;
+
   --fw-regular: 400;
   --fw-semi-bold: 500;
   --fw-bold: 700;
@@ -36,6 +38,7 @@
   --fs-nav: var(--fs-400);
   --fs-primary-heading: var(--fs-800);
   --fs-secondary-heading: var(--fs-700);
+  --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
 @media screen and (min-width: 50em) {

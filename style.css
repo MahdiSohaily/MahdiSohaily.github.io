@@ -2,34 +2,82 @@
 @import url("./reset.css");
 @import url("./utility.css");
 
-.nav {
+/* Header section styles */
+
+.main_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 50px;
+  height: var(--nav-height);
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.desktop-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  padding-inline: 2.5rem;
+}
+
+.desktop-menu ol {
+  counter-reset: item;
+}
+.desktop-menu ol li {
+  display: block;
+}
+.desktop-menu ol li:before {
+  content: "0" counter(item) ". ";
+  counter-increment: item;
+  color: var(--green);
+}
+
+.mobile_nav {
   display: none;
 }
 
-@media screen and (min-width: 50em) {
-  .nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    border-left: 3px solid var(--clr-light-gray);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  }
-  .nav-icon {
-    padding: 25px;
-  }
+.desktop-menu li a {
+  padding-inline: 5px;
+  color: var(--lightest-slate);
+}
 
-  .nav ul {
-    list-style: none;
-  }
+.desktop-menu li:hover a {
+  color: var(--green);
+  transition: var(--transition);
+}
 
-  .nav ul li {
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
-    padding: 25px;
-  }
+.resume {
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  color: var(--green);
+}
+
+/* social icons style */
+
+.social_accounts {
+  position: fixed;
+  left: 50px;
+  bottom: 120px;
+}
+
+.social_accounts ul {
+  list-style: none;
+}
+
+.social_accounts ul li {
+  padding-block: 0.6rem;
+}
+
+.social_accounts ul li a {
+  color: var(--lightest-slate);
+}
+
+.feather {
+  width: 20px;
+  height: 20px;
 }

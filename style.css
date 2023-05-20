@@ -4,7 +4,7 @@
   --clr-black: #1f1f1f;
   --clr-light-gray: #f2f2f2;
   --clr-dark-gray: #999999;
-  --clr-txt: #6d6d6d;
+  --clr-semi-dark-gray: #6d6d6d;
 
   --ff-primary: "Barlow Semi Condensed", sans-serif;
   --ff-heading: var(--ff-primary);
@@ -37,4 +37,73 @@
     --fs-primary-heading: var(--fs-900);
     --fs-secondary-heading: var(--fs-800);
   }
+}
+
+/* Utility Classes */
+
+.txt-white {
+  color: var(--clr-white);
+}
+.txt-black {
+  color: var(--clr-black);
+}
+.txt-light-gray {
+  color: var(--clr-light-gray);
+}
+.txt-dark-gray {
+  color: var(--clr-dark-gray);
+}
+.txt-semi-dark-gray {
+  color: var(--clr-semi-dark-gray);
+}
+
+.bg-white {
+  background-color: var(--clr-white);
+}
+.bg-black {
+  background-color: var(--clr-black);
+}
+.bg-light-gray {
+  background-color: var(--clr-light-gray);
+}
+.bg-dark-gray {
+  background-color: var(--clr-dark-gray);
+}
+.bg-semi-dark-gray {
+  background-color: var(--clr-semi-dark-gray);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-200 {
+  font-size: var(--fs-200);
 }

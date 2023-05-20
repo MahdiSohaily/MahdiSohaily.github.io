@@ -3,28 +3,12 @@
 @import url("./utility.css");
 
 .nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border-left: 3px solid var(--clr-light-gray);
+  display: none;
+}
+
+#intro {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-icon {
-  padding: 25px;
-}
-
-.nav ul {
-  list-style: none;
-}
-
-.nav ul li {
-  writing-mode: vertical-lr;
-  text-orientation: mixed;
-  padding: 25px;
 }
 
 @media screen and (min-width: 50em) {

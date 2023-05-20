@@ -125,8 +125,16 @@
   margin-bottom: 2rem;
 }
 
+.mt-200 {
+  margin-top: 2rem;
+}
+
 .mb-300 {
   margin-bottom: 3rem;
+}
+
+.mt-300 {
+  margin-top: 3rem;
 }
 
 .ff-mono {

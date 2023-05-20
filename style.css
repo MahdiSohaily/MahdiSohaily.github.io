@@ -59,25 +59,42 @@
 
 /* social icons style */
 
-.social_accounts {
+.contact-info {
   position: fixed;
-  left: 50px;
   bottom: 120px;
 }
 
-.social_accounts ul {
+.left {
+  left: 50px;
+}
+
+.right {
+  right: 50px;
+}
+
+.contact-info ul {
   list-style: none;
 }
 
-.social_accounts ul li {
+.contact-info ul li {
   padding-block: 0.6rem;
 }
 
-.social_accounts ul li a {
+.contact-info ul li a {
   color: var(--lightest-slate);
 }
 
 .feather {
   width: 20px;
   height: 20px;
+}
+
+.email {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+
+.email a {
+  color: var(--lightest-slate);
+  font-size: var(--fs-400);
 }

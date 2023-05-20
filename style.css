@@ -13,3 +13,7 @@
 ::-webkit-scrollbar-track {
   background: var(--navy);
 }
+
+/* Header section styles */
+@media screen and (min-width: 768px) {
+}

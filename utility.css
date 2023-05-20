@@ -86,3 +86,15 @@
 .full-height {
   height: 100%;
 }
+
+.upper-case {
+  text-transform: uppercase;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bg-hover:hover {
+  background-color: var(--clr-light-gray);
+}

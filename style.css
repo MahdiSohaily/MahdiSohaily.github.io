@@ -6,9 +6,12 @@
   --clr-txt: #6d6d6d;
 
   --ff-primary: "Barlow Semi Condensed", sans-serif;
-
   --ff-heading: var(--ff-primary);
   --ff-body: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
 }
 
 /* Box sizing rules */
@@ -16,6 +19,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: var(--ff-body);
 }
 
 /* Remove default margin */

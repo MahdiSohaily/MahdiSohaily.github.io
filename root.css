@@ -49,7 +49,3 @@
     --fs-secondary-heading: var(--fs-800);
   }
 }
-
-body {
-  background-color: var(--navy);
-}

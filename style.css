@@ -3,7 +3,21 @@
 @import url("./utility.css");
 
 /* Header section styles */
+html,
+body {
+  height: 100%;
+}
 
+.container {
+  min-height: 100vh;
+  margin: 0px auto;
+  padding: 100px 0px;
+  max-width: 1000px;
+  border: 2px solid red;
+}
+body {
+  background-color: var(--navy);
+}
 .main_nav {
   display: flex;
   justify-content: space-between;
@@ -31,7 +45,7 @@ ol {
 .desktop-menu ol li {
   display: block;
 }
- ol li:before {
+ol li:before {
   content: "0" counter(item) ". ";
   counter-increment: item;
   color: var(--green);

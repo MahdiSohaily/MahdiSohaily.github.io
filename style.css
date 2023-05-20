@@ -26,13 +26,15 @@
   --fs-body: var(--fs-300);
   --fs-nav: var(--fs-400);
   --fs-primary-heading: var(--fs-800);
+  --fs-secondary-heading: var(--fs-700);
 }
 
 @media screen and (min-width: 50em) {
   :root {
     --fs-600: 2.5rem;
     --fs-700: 3.5rem;
-    --fs-800: 3.2rem;
+    --fs-primary-heading: var(--fs-900);
+    --fs-secondary-heading: var(--fs-800);
   }
 }
 

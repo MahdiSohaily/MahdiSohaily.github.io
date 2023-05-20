@@ -1,3 +1,4 @@
+@import url("./reset.css");
 :root {
   --clr-white: #fefefe;
   --clr-black: #1f1f1f;
@@ -37,4 +38,3 @@
     --fs-secondary-heading: var(--fs-800);
   }
 }
-

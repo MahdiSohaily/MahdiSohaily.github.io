@@ -1,18 +1,18 @@
 /* Utility Classes */
 
-.txt-white {
+.text-white {
   color: var(--clr-white);
 }
-.txt-black {
+.text-black {
   color: var(--clr-black);
 }
-.txt-light-gray {
+.text-light-gray {
   color: var(--clr-light-gray);
 }
-.txt-dark-gray {
+.text-dark-gray {
   color: var(--clr-dark-gray);
 }
-.txt-semi-dark-gray {
+.text-semi-dark-gray {
   color: var(--clr-semi-dark-gray);
 }
 
@@ -97,4 +97,8 @@
 
 .bg-hover:hover {
   background-color: var(--clr-light-gray);
+}
+
+.text-center {
+  text-align: center;
 }

@@ -6,68 +6,6 @@
   display: none;
 }
 
-#intro {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.left-section {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 40%;
-  padding: 1rem;
-  z-index: -1;
-}
-
-@media screen and (min-width: 50em) { 
-  .left-section {
-    border: 2px solid red;
-    width: 300px;
-    align-items: start;
-    justify-content: space-between;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    height: 100%;
-    padding: 1rem;
-    z-index: 300;
-  }
-}
-
-.social-account {
-  display: inline-block;
-  list-style: none;
-  display: flex;
-  gap: 0.5rem;
-  margin-block: 1rem;
-  background-color: wheat;
-}
-
-.social {
-  width: 20px;
-  height: 20px;
-}
-.card {
-}
-
-.img-responsive {
-  width: 300px;
-  height: auto;
-  margin: auto;
-}
-
-.card-heading,
-.card-description {
-  text-align: center;
-}
-
 @media screen and (min-width: 50em) {
   .nav {
     position: fixed;
@@ -94,8 +32,35 @@
     text-orientation: mixed;
     padding: 25px;
   }
+}
 
+/* intro section styles */
+.social {
+  width: 20px;
+  height: 20px;
+}
+#intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-section,
+.profile-section {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 50em) {
   #intro {
     flex-direction: row;
+    flex-basis: 300px;
+  }
+  .social-section {
+    padding: 3rem;
+    width: 20%;
+    border: 2px solid red;
+  }
+  .profile-section {
+    padding: 3rem;
+    width: 80%;
   }
 }

@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-/* eslint-disable import/no-extraneous-dependencies */
 import PropTypes from 'prop-types';
 import './hero.css';
 
@@ -19,21 +16,12 @@ export default function Hero({ person }) {
         <p className="text-slate fs-500 mb-300">
           I am a full-stack developer specializing in TypeScript, React, Redux,
           and Node.js. I enjoy coding and building apps that make life easy.
-          <a
-            className="text-green"
-            href="https://upstatement.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Upstatement
-          </a>
-          .
         </p>
       </div>
     </section>
   );
 }
 
-// Hero.propTypes = {
-//   person: PropTypes.string.isRequired,
-// };
+Hero.propTypes = {
+  person: PropTypes.objectOf(Object).isRequired,
+};

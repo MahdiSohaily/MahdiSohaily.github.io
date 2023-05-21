@@ -1,6 +1,5 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-one-expression-per-line */
+import PropTypes from 'prop-types';
+
 export default function Details({
   name,
   content,
@@ -22,7 +21,15 @@ export default function Details({
         <span>{name}</span>
       </h3>
       <p className="text-light-slate ff-mono fs-xs">
-        {fromMonth} {fromYear} - {toYear} {toMonth}
+        {fromMonth}
+        {' '}
+        {fromYear}
+        {' '}
+        -
+        {' '}
+        {toYear}
+        {' '}
+        {toMonth}
       </p>
       <div>
         <p className="text-slate fs-xl">{content}</p>
@@ -30,3 +37,12 @@ export default function Details({
     </div>
   );
 }
+
+Details.propTypes = {
+  name: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  fromYear: PropTypes.string.isRequired,
+  fromMonth: PropTypes.string.isRequired,
+  toYear: PropTypes.string.isRequired,
+  toMonth: PropTypes.string.isRequired,
+};

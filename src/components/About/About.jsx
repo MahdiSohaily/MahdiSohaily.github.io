@@ -1,21 +1,16 @@
-/* eslint-disable quotes */
-/* eslint-disable operator-linebreak */
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-array-index-key */
-/* eslint-disable array-callback-return */
-/* eslint-disable consistent-return */
-/* eslint-disable react/prop-types */
-// eslint-disable-next-line no-unused-vars
+import PropTypes from 'prop-types';
+
 export default function About({ person, strengths }) {
-  const level = ["master"];
+  const level = ['master'];
   const skills = strengths.map((item) => {
     if (level.includes(item.proficiency)) {
       return item.name;
     }
+    return false;
   });
 
-  const display =
-    skills && skills.map((skill, index) => <li key={index}>{skill}</li>);
+  const display = skills && skills.map((skill, index) => <li key={index}>{skill}</li>);
 
   return (
     <section id="about">
@@ -40,3 +35,8 @@ export default function About({ person, strengths }) {
     </section>
   );
 }
+
+About.propTypes = {
+  person: PropTypes.objectOf(Object).isRequired,
+  strengths: PropTypes.objectOf(Object).isRequired,
+};

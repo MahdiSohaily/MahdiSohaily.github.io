@@ -53,7 +53,21 @@ export default function Experience({ jobs }) {
         <div className="list">
           <ul className="option-container">{display}</ul>
         </div>
-        <div className="content-container">{tabs[active]}</div>
+        <div className="content-container">
+          {active ? (
+            tabs[active]
+          ) : (
+            <Details
+              key={jobs[0].id}
+              name={jobs[0].name}
+              content={jobs[0].responsibilities}
+              fromYear={jobs[0].fromYear}
+              toYear={jobs[0].toYear}
+              fromMonth={jobs[0].fromMonth}
+              toMonth={jobs[0].toMonth}
+            />
+          )}
+        </div>
       </div>
     </section>
   );

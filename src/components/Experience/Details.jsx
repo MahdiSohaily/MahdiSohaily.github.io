@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 export default function Details({
   name,
   content,
@@ -37,12 +35,3 @@ export default function Details({
     </div>
   );
 }
-
-Details.propTypes = {
-  name: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
-  fromYear: PropTypes.string.isRequired,
-  fromMonth: PropTypes.string.isRequired,
-  toYear: PropTypes.string.isRequired,
-  toMonth: PropTypes.string.isRequired,
-};

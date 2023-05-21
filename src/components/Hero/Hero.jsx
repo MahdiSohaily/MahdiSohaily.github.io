@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import './hero.css';
 
 export default function Hero({ person }) {
@@ -21,7 +20,3 @@ export default function Hero({ person }) {
     </section>
   );
 }
-
-Hero.propTypes = {
-  person: PropTypes.objectOf(Object).isRequired,
-};

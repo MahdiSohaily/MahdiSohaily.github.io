@@ -1,5 +1,3 @@
-/* eslint-disable no-restricted-syntax */
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 import Details from './Details';
 import Tab from './Tab';
@@ -66,7 +64,3 @@ export default function Experience({ jobs }) {
     </section>
   );
 }
-
-Experience.propTypes = {
-  jobs: PropTypes.objectOf(Array).isRequired,
-};

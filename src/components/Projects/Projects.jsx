@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import Card from './Card';
 import './projects.css';
 
@@ -22,7 +21,3 @@ export default function Projects({ data }) {
     </section>
   );
 }
-
-Projects.propTypes = {
-  data: PropTypes.objectOf(Object).isRequired,
-};

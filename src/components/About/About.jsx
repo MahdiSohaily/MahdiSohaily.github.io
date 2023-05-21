@@ -1,6 +1,3 @@
-/* eslint-disable react/no-array-index-key */
-import PropTypes from 'prop-types';
-
 export default function About({ person, strengths }) {
   const level = ['master'];
   const skills = strengths.map((item) => {
@@ -35,8 +32,3 @@ export default function About({ person, strengths }) {
     </section>
   );
 }
-
-About.propTypes = {
-  person: PropTypes.objectOf(Object).isRequired,
-  strengths: PropTypes.objectOf(Object).isRequired,
-};

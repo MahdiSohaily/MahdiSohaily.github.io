@@ -27,6 +27,7 @@
 .option-container li:hover {
   background-color: var(--light-navy);
 }
+
 .option-container li:hover a {
   color: var(--green);
   background-color: var(--light-navy);

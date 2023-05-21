@@ -1,11 +1,13 @@
 ::-webkit-scrollbar {
   width: 12px;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--dark-slate);
   border: 3px solid var(--navy);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--navy);
 }
@@ -16,9 +18,9 @@ header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0px;
+  top: 0;
   z-index: 11;
-  padding: 0px 25px;
+  padding: 0 25px;
   width: 100%;
   height: var(--nav-height);
   background-color: rgba(10, 25, 47, 0.85);
@@ -51,15 +53,15 @@ header {
   display: flex;
   align-items: center;
   position: fixed;
-  top: 0px;
-  bottom: 0px;
+  top: 0;
+  bottom: 0;
   right: min(-75vw, -400px);
   padding: 50px 10px;
   width: min(75vw, 400px);
   height: 100vh;
-  outline: 0px;
+  outline: 0;
   background-color: var(--light-navy);
-  box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+  box-shadow: -10px 0 30px -15px var(--navy-shadow);
   z-index: 9;
   transition: var(--transition);
 }
@@ -78,13 +80,14 @@ header {
 }
 
 .mobile_nav aside ol li {
-  margin: 0px 5px;
+  margin: 0 5px;
   text-align: center;
   position: relative;
   width: 100%;
   font-size: clamp(var(--fs-sm), 4vw, var(--fs-lg));
 }
-.mobile_nav aside ol li:before {
+
+.mobile_nav aside ol li::before {
   display: block;
   content: "0" counter(item) ". ";
   counter-increment: item;
@@ -128,9 +131,10 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-    header {
-        padding: 0 50px;
-    }
+  header {
+    padding: 0 50px;
+  }
+
   .desktop_nav {
     display: flex;
     align-items: center;
@@ -146,12 +150,13 @@ header {
   }
 
   .desktop_nav ol li {
-    margin: 0px 5px;
+    margin: 0 5px;
     position: relative;
     display: block;
     font-size: 13px;
   }
-  .desktop_nav ol li:before {
+
+  .desktop_nav ol li::before {
     content: "0" counter(item) ". ";
     counter-increment: item;
     color: var(--green);
@@ -191,7 +196,7 @@ header {
   height: 90px !important;
   width: 1px;
   height: 90px;
-  margin: 0px auto;
+  margin: 0 auto;
   background-color: var(--light-slate);
 }
 
@@ -230,6 +235,7 @@ header {
   -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
 }
+
 .email:hover a {
   display: block;
   transform: translateY(-3px);

@@ -1,11 +1,3 @@
-/* eslint-disable import/extensions */
-/* eslint-disable react/prop-types */
-/* eslint-disable quotes */
-/* eslint-disable object-curly-newline */
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable no-unused-vars */
-/* eslint-disable import/no-extraneous-dependencies */
-import PropTypes from "prop-types";
 import Hero from "./Hero/Hero";
 import Social from "./Social/SocialAccounts";
 import About from "./About/About";
@@ -27,7 +19,3 @@ export default function Main({ user }) {
     </main>
   );
 }
-
-// Main.propTypes = {
-//   user: PropTypes.string.isRequired,
-// };

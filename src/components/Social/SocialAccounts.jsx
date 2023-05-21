@@ -1,6 +1,3 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 export default function SocialAccounts({ publicId, links }) {
   const accountIfo = {
     facebook: null,

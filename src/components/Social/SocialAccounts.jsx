@@ -1,13 +1,26 @@
-import React from 'react';
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+export default function SocialAccounts({ publicId, links }) {
+  const accountIfo = {
+    facebook: null,
+    instagram: null,
+    twitter: null,
+    linkedin: null,
+    github: null,
+  };
 
-export default function SocialAccounts() {
+  for (const item of links) {
+    accountIfo[item.name] = item.address;
+  }
+
   return (
     <div className="contact-container">
       <div className="contact-info left">
         <ul className="social-icon-menu">
           <li>
             <a
-              href="https://github.com/bchiang7"
+              href={accountIfo.github}
               aria-label="GitHub"
               target="_blank"
               rel="noreferrer"
@@ -30,7 +43,7 @@ export default function SocialAccounts() {
           </li>
           <li>
             <a
-              href="https://www.instagram.com/bchiang7"
+              href={accountIfo.instagram}
               aria-label="Instagram"
               target="_blank"
               rel="noreferrer"
@@ -55,7 +68,7 @@ export default function SocialAccounts() {
           </li>
           <li>
             <a
-              href="https://twitter.com/bchiang7"
+              href={accountIfo.twitter}
               aria-label="Twitter"
               target="_blank"
               rel="noreferrer"
@@ -78,7 +91,7 @@ export default function SocialAccounts() {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/bchiang7"
+              href={accountIfo.linkedin}
               aria-label="Linkedin"
               target="_blank"
               rel="noreferrer"
@@ -103,7 +116,7 @@ export default function SocialAccounts() {
           </li>
           <li>
             <a
-              href="https://codepen.io/bchiang7"
+              href={accountIfo.facebook}
               aria-label="Codepen"
               target="_blank"
               rel="noreferrer"
@@ -136,7 +149,7 @@ export default function SocialAccounts() {
             className="text-light-slate"
             href="mailto:mahdi.sohaily4030@gmail.com"
           >
-            mahdi.sohaily4030@gmail.com
+            {publicId}
           </a>
         </div>
       </div>

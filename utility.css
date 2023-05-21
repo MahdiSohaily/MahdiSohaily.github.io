@@ -141,3 +141,8 @@
   font-family: var(--font-mono);
   font-weight: 300;
 }
+
+.align-center {
+  display: flex;
+  justify-content: center;
+}

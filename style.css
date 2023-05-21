@@ -141,8 +141,8 @@ h1 {
   margin-inline: auto;
 }
 
-.list {
-  width: 20%;
+.option-container {
+  display: flex;
 }
 
 .option-container li {
@@ -152,7 +152,7 @@ h1 {
 }
 
 .option-container li.active {
-  border-left: 2px solid var(--green);
+  border-bottom: 2px solid var(--green);
 }
 
 .option-container li p {
@@ -168,9 +168,26 @@ h1 {
   background-color: var(--light-navy);
 }
 
-.content-container {
-  width: 80%;
+@media screen and (min-width: 768px) {
+  .list {
+    width: 20%;
+  }
+
+  .content-container {
+    width: 80%;
+  }
+
+  .option-container {
+    flex-direction: column;
+  }
+
+  .option-container li.active {
+    border-bottom: none;
+    border-left: 2px solid var(--green);
+  }
 }
+
+
 
 /* Contact section style */
 #contact {

@@ -7,7 +7,7 @@ h6 {
   margin: 0px 0px 10px;
   font-weight: 600;
   color: var(--lightest-slate);
-  line-height: 1.1;
+  line-height: 0.9 !important;
 }
 .text-dark-navy {
   color: var(--dark-navy);

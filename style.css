@@ -51,3 +51,11 @@ h1 {
   font-size: clamp(var(--fs-sm), 5vw, var(--fs-md));
   font-weight: 400;
 }
+
+.info {
+  margin: 20px 0px 0px;
+  max-width: 540px;
+}
+.info p{
+  font-size: 19px;
+}

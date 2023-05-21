@@ -5,9 +5,7 @@ import About from './components/About/About';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
-import './templates/root.css';
-import './templates/reset.css';
-import './templates/utility.css';
+
 import './style.css';
 
 function App() {

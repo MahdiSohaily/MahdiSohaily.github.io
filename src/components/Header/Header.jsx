@@ -22,22 +22,22 @@ export default function Header() {
         </div>
         <div className="desktop_nav">
           <ol>
-            <li className="fadedown-enter-done">
+            <li>
               <a className="text-light-slate" href="/#about">
                 About
               </a>
             </li>
-            <li className="fadedown-enter-done">
+            <li>
               <a className="text-light-slate" href="/#jobs">
                 Experience
               </a>
             </li>
-            <li className="fadedown-enter-done">
+            <li>
               <a className="text-light-slate" href="/#projects">
                 Work
               </a>
             </li>
-            <li className="fadedown-enter-done">
+            <li>
               <a className="text-light-slate" href="/#contact">
                 Contact
               </a>

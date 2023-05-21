@@ -33,7 +33,7 @@ section {
   white-space: nowrap;
 }
 
-.section-heading:before {
+.number:before {
   counter-increment: item;
   content: "0" counter(item) ". ";
   position: relative;
@@ -62,11 +62,6 @@ section {
   }
 }
 
-@media screen and (min-width: 1080px) {
-  main {
-    padding-inline: 150px;
-  }
-}
 
 @media screen and (min-width: 768px) {
   main {
@@ -74,6 +69,12 @@ section {
   }
   section {
     padding: 100px 0px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  main {
+    padding-inline: 200px;
   }
 }
 
@@ -120,4 +121,20 @@ h1 {
   .profile {
     width: 38%;
   }
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+  width: 100%;
 }

@@ -18,9 +18,7 @@
   <header>
     <nav class="nav main_nav">
       <div class="logo fade-enter-done" tabindex="-1">
-        <a href="/" aria-label="home">
-          logo
-        </a>
+        <a href="/" aria-label="home"> logo </a>
       </div>
       <div class="desktop_nav">
         <ol>
@@ -43,12 +41,20 @@
       </div>
       <div class="mobile_nav">
         <div>
-          <button aria-label="Menu" class="menu__StyledHamburgerButton-sdn9y6-1 eCxtrN">
-            <div class="ham-box">
-              <div class="ham-box-inner"></div>
-            </div>
+          <button id="side_nav" class="menu_icon">
+            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="Menu / Menu_Alt_02">
+                <path id="Vector" d="M11 17H19M5 12H19M11 7H19" stroke="#64ffda" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </g>
+            </svg>
           </button>
-          <aside aria-hidden="true" tabindex="-1" class="menu__StyledSidebar-sdn9y6-2 lknEs">
+          <aside id="mobile_sidebar">
+            <button id="close" class="menu_icon">
+              <svg width="30px" height="30px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#64ffda"
+                  d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z" />
+              </svg></button>
             <nav>
               <ol>
                 <li><a href="/#about">About</a></li>
@@ -195,7 +201,21 @@
     <section id="job" class="container">section</section>
   </main>
 
-  100
+  <script>
+    const btn = document.getElementById("side_nav");
+    const sidebar = document.getElementById("mobile_sidebar");
+    const close = document.getElementById("close");
+
+    btn.addEventListener("click", () => {
+      sidebar.style.right = 0;
+    });
+    
+    close.addEventListener("click", () => {
+      sidebar.style.right = "-100%";
+    });
+
+
+  </script>
 </body>
 
 </html>

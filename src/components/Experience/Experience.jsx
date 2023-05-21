@@ -1,13 +1,9 @@
-/* eslint-disable arrow-body-style */
-/* eslint-disable no-use-before-define */
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable quotes */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import { useState } from "react";
-import Details from "./Details";
-import Tab from "./Tab";
-import "./experience.css";
+import PropTypes from 'prop-types';
+import { useState } from 'react';
+import Details from './Details';
+import Tab from './Tab';
+import './experience.css';
 
 export default function Experience({ jobs }) {
   const [active, setActive] = useState(null);
@@ -33,17 +29,15 @@ export default function Experience({ jobs }) {
     );
   }
 
-  const display = selectedJobs.map((item) => {
-    return (
-      <Tab
-        key={item.id}
-        title={item.name}
-        id={item.id}
-        handleActive={handleActive}
-        active={active}
-      />
-    );
-  });
+  const display = selectedJobs.map((item) => (
+    <Tab
+      key={item.id}
+      title={item.name}
+      id={item.id}
+      handleActive={handleActive}
+      active={active}
+    />
+  ));
   return (
     <section id="jobs" className="mini-section">
       <h2 className="number section-heading text-lightest-slate mb-200">
@@ -72,3 +66,7 @@ export default function Experience({ jobs }) {
     </section>
   );
 }
+
+Experience.propTypes = {
+  jobs: PropTypes.objectOf(Array).isRequired,
+};

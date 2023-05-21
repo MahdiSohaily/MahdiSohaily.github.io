@@ -40,7 +40,6 @@ header {
   width: 100%;
   color: var(--lightest-slate);
   font-family: var(--font-mono);
-  counter-reset: item 0;
   z-index: 12;
 }
 
@@ -70,18 +69,23 @@ header {
   .desktop_nav ol li {
     margin: 0px 5px;
     position: relative;
-    font-size: var(--fs-xs);
+    display: block;
+    font-size: 13px;
   }
   .desktop_nav ol li:before {
     content: "0" counter(item) ". ";
     counter-increment: item;
     color: var(--green);
     font-family: var(--font-mono);
-    font-size: var(--fs-xs);
   }
 
-  .desktop_nav oi li a {
+  .desktop_nav ol li a {
     padding: 10px;
+    font-family: var(--font-mono);
+  }
+
+  .desktop_nav ol li a:hover {
+    color: var(--green);
   }
 
   .resume {

@@ -12,6 +12,9 @@ import Contact from './Contact/Contact';
 
 export default function Main({ search }) {
   const [user, setUser] = useState({});
+  const {
+    person, jobs, projects, strengths,
+  } = user;
 
   useEffect(() => {
     axios

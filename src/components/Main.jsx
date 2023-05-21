@@ -6,7 +6,5 @@ export default function Main({ children }) {
 }
 
 Main.propTypes = {
-  children: PropTypes.arrayOf(
-    PropTypes.oneOfType(PropTypes.element),
-  ).isRequired,
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };

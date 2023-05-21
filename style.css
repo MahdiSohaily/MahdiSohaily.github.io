@@ -15,5 +15,18 @@
 }
 
 /* Header section styles */
+header {
+  padding-inline: 25px;
+}
+
+.main_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media screen and (min-width: 768px) {
+  header {
+    padding-inline: 50px;
+  }
 }

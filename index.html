@@ -17,9 +17,13 @@
 <body class="bg-navy">
   <header>
     <nav class="nav main_nav">
-      <div class="logo fade-enter-done" tabindex="-1">logo</div>
-      <div class="menu-container">
-        <ol class="desktop-menu">
+      <div class="logo fade-enter-done" tabindex="-1">
+        <a href="/" aria-label="home">
+          logo
+        </a>
+      </div>
+      <div class="desktop_nav">
+        <ol>
           <li class="fadedown-enter-done" style="transition-delay: 0ms">
             <a class="text-light-slate" href="/#about">About</a>
           </li>
@@ -33,9 +37,10 @@
             <a class="text-light-slate" href="/#contact">Contact</a>
           </li>
         </ol>
-        <a href="/resume.pdf" class="text-green resume">Resume</a>
+        <div class="fadedown-enter-done" style="transition-delay: 400ms">
+          <a class="resume" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
       </div>
-
       <div class="mobile_nav">
         <div>
           <button aria-label="Menu" class="menu__StyledHamburgerButton-sdn9y6-1 eCxtrN">
@@ -46,12 +51,12 @@
           <aside aria-hidden="true" tabindex="-1" class="menu__StyledSidebar-sdn9y6-2 lknEs">
             <nav>
               <ol>
-                <li><a class="text-light-slate" href="/#about">About</a></li>
-                <li><a class="text-light-slate" href="/#jobs">Experience</a></li>
-                <li><a class="text-light-slate" href="/#projects">Work</a></li>
-                <li><a class="text-light-slate" href="/#contact">Contact</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#jobs">Experience</a></li>
+                <li><a href="/#projects">Work</a></li>
+                <li><a href="/#contact">Contact</a></li>
               </ol>
-              <a href="/resume.pdf" class="text-green resume-link">Resume</a>
+              <a href="/resume.pdf" class="resume-link">Resume</a>
             </nav>
           </aside>
         </div>

@@ -1,3 +1,5 @@
+import './experience.css';
+
 export default function Experience() {
   return (
     <section id="jobs" className="mini-section">

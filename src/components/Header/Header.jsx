@@ -1,6 +1,16 @@
-import './header.css';
+import { useRef } from "react";
+import "./header.css";
 
 export default function Header() {
+  const nav = useRef();
+
+  const openNav = () => {
+    nav.current.style.right = 0;
+  };
+  
+  const closeNav = () => {
+    nav.current.style.right = "-100%";
+  };
   return (
     <header>
       <nav className="nav main_nav">
@@ -56,7 +66,12 @@ export default function Header() {
         </div>
         <div className="mobile_nav">
           <div>
-            <button type="button" id="side_nav" className="menu_icon">
+            <button
+              onClick={openNav}
+              type="button"
+              id="side_nav"
+              className="menu_icon"
+            >
               <svg
                 width="50px"
                 height="50px"
@@ -84,8 +99,13 @@ export default function Header() {
                 </g>
               </svg>
             </button>
-            <aside id="mobile_sidebar">
-              <button type="button" id="close" className="menu_icon">
+            <aside ref={nav} id="mobile_sidebar">
+              <button
+              onClick={closeNav}
+                type="button"
+                id="close"
+                className="menu_icon"
+              >
                 <svg
                   width="30px"
                   height="30px"

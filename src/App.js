@@ -26,7 +26,7 @@ function App() {
   return (
     <>
       <Header search={handleSearch} />
-      {user && <Main user={user} />}
+      {user? <Main user={user} /> : <p>Loading</p>}
     </>
   );
 }

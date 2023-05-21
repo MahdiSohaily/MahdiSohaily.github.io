@@ -12,7 +12,7 @@ export default function Contact() {
       </p>
       <a
         className="resume"
-        href="mailto:brittany.chiang@gmail.com"
+        href="mailto:mahdi.sohaily4030@gmail.com"
         rel="noopener noreferrer"
         target="_blank"
       >

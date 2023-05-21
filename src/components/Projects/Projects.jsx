@@ -1,8 +1,6 @@
-/* eslint-disable quotes */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import Card from "./Card";
-import "./projects.css";
+import PropTypes from 'prop-types';
+import Card from './Card';
+import './projects.css';
 
 export default function Projects({ data }) {
   const projects = data.length >= 6 ? data.slice(0, 7) : data;
@@ -24,3 +22,7 @@ export default function Projects({ data }) {
     </section>
   );
 }
+
+Projects.propTypes = {
+  data: PropTypes.objectOf(Object).isRequired,
+};

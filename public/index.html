@@ -9,8 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.cdnfonts.com/css/calibre" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/sf-mono" rel="stylesheet" />
-
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-navy">
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -25,18 +23,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script>
-      const btn = document.getElementById("side_nav");
-      const sidebar = document.getElementById("mobile_sidebar");
-      const close = document.getElementById("close");
-
-      btn.addEventListener("click", () => {
-        sidebar.style.right = 0;
-      });
-
-      close.addEventListener("click", () => {
-        sidebar.style.right = "-100%";
-      });
-    </script>
   </body>
 </html>

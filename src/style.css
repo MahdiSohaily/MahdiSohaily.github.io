@@ -1,8 +1,3 @@
-@import url("./templates/root.css");
-@import url("./templates/reset.css");
-@import url("./templates/utility.css");
-@import url("./templates/header.css");
-
 main {
   padding-inline: 25px;
   margin: 0px auto;

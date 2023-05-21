@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
+
 export default function Card({
   name, content, toYear, toMonth,
 }) {
@@ -56,3 +57,10 @@ export default function Card({
     </div>
   );
 }
+
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  toYear: PropTypes.string.isRequired,
+  toMonth: PropTypes.string.isRequired,
+};

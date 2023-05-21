@@ -10,15 +10,27 @@
 
 .contact-info {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
 }
 
+.contact-info::after {
+  content: " ";
+  display: block;
+  height: 90px !important;
+  border: 1px solid var(--light-slate);
+  background-color: rebeccapurple;
+}
+
 .contact-info.left {
-  left: 50px;
+  left: 20px;
 }
 
 .contact-info.right {
-  right: 50px;
+  right: 40px;
 }
 
 .social-icon-menu li a {
@@ -32,11 +44,16 @@
   color: var(--green);
 }
 
-
 .feather {
   width: 20px;
   height: 20px;
   color: var(--light-slate);
+}
+
+@media screen and (min-width: 1080px) {
+  .contact-info.left {
+    left: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {

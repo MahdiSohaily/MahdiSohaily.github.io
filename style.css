@@ -100,13 +100,11 @@ h1 {
   flex-direction: column;
   gap: 50px;
 }
-.profile {
-  display: flex;
-  justify-content: center;
-}
 
 .profile img {
+  display: block;
   width: 70%;
+  margin-inline: auto;
   border-radius: var(--border-radius);
 }
 

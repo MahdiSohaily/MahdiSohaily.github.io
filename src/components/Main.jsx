@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 /* eslint-disable no-unused-vars */
@@ -14,20 +15,12 @@ export default function Main({ search }) {
 
   useEffect(() => {
     axios
-      .get(
-        `https://bio.torre.co/api/bios/${
-          user === '' || !user ? 'oscarfmdev' : user
-        }`,
-      )
+      .get(`https://bio.torre.co/api/bios/${search}`)
       .then((response) => {
-        setBio(response.data);
-        setLoading(false);
+        setUser(response.data);
       })
-      .catch((error) => {
-        setError(error);
-        setLoading(false);
-      });
-  }, [user]);
+      .catch((error) => {});
+  }, [search]);
   return (
     <main>
       <Hero />

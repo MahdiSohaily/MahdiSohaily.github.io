@@ -13,13 +13,8 @@ main {
 }
 
 section {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 100vh;
   margin: 0px auto;
-  padding: 80px 0px;
+  padding-top: 80px;
   max-width: 1000px;
 }
 
@@ -62,23 +57,39 @@ section {
   }
 }
 
-
 @media screen and (min-width: 768px) {
   main {
     padding-inline: 100px;
   }
   section {
-    padding: 100px 0px;
+    padding-top: 100px;
+    min-height: 100vh;
   }
 }
 
 @media screen and (min-width: 1080px) {
   main {
-    padding-inline: 200px;
+    padding-inline: 150px;
   }
 }
 
 /* hero section styles */
+
+#hero {
+  min-height: 100vh;
+}
+#hero,
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#contact {
+  padding-block: 60px;
+  margin-bottom: 50px;
+}
 h1 {
   margin: 0px 0px 30px 4px;
   color: var(--green);
@@ -121,6 +132,11 @@ h1 {
   .profile {
     width: 38%;
   }
+}
+
+.mini-section {
+  max-width: 700px;
+  margin-inline: auto;
 }
 
 #contact {

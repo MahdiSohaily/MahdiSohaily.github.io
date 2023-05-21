@@ -141,16 +141,35 @@ h1 {
   margin-inline: auto;
 }
 
-.option-container {
+.list {
   width: 20%;
+}
+
+.option-container li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.option-container li.active {
+  border-left: 2px solid var(--green);
+}
+
+.option-container li p {
+  display: flex;
+  align-items: center;
+}
+
+.option-container li:hover {
+  background-color: var(--light-navy);
+}
+.option-container li:hover a {
+  color: var(--green);
+  background-color: var(--light-navy);
 }
 
 .content-container {
   width: 80%;
-}
-
-.tab-option:hover {
-  color: var(--green);
 }
 
 /* Contact section style */

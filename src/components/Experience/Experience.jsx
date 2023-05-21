@@ -1,3 +1,5 @@
+import Details from './Details';
+import Tab from './Tab';
 import './experience.css';
 
 export default function Experience() {
@@ -9,42 +11,15 @@ export default function Experience() {
       <div className="inner">
         <div className="list">
           <ul className="option-container">
-            <li className="active">
-              <a
-                href="#tab1"
-                className="text-slate ff-mono fs-xs pointer tab-option"
-              >
-                Facebook
-              </a>
-            </li>
-            <li>
-              <a
-                href="#tab2"
-                className="text-slate ff-mono fs-xs pointer tab-option"
-              >
-                Instagram
-              </a>
-            </li>
-            <li>
-              <a
-                href="#tab3"
-                className="text-slate ff-mono fs-xs pointer tab-option"
-              >
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a
-                href="#tab4"
-                className="text-slate ff-mono fs-xs pointer tab-option"
-              >
-                What’s App
-              </a>
-            </li>
+            <Tab />
+            <Tab />
+            <Tab />
+            <Tab />
+            <Tab />
           </ul>
         </div>
         <div className="content-container">
-          
+          <Details />
         </div>
       </div>
     </section>

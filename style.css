@@ -3,3 +3,44 @@
 @import url("./utility.css");
 @import url("./header.css");
 
+/* Hero section styles */
+.contact-container {
+  display: none;
+}
+
+.contact-info {
+  position: fixed;
+  bottom: 0;
+}
+
+.contact-info.left {
+  left: 50px;
+}
+
+.contact-info.right {
+  right: 50px;
+}
+
+.social-icon-menu li a {
+  display: inline-block;
+  padding: 10px !important;
+}
+
+.social-icon-menu li a:hover .feather {
+  transform: translateY(-3px);
+  transition: var(--transition);
+  color: var(--green);
+}
+
+
+.feather {
+  width: 20px;
+  height: 20px;
+  color: var(--light-slate);
+}
+
+@media screen and (min-width: 768px) {
+  .contact-container {
+    display: block;
+  }
+}

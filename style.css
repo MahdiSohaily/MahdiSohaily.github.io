@@ -201,17 +201,52 @@ h1 {
 .project-card {
   box-shadow: 0 10px 30px -15px var(--navy-shadow);
   display: flex;
-  -webkit-box-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
   flex-direction: column;
-  align-items: flex-start;
-  position: relative;
   height: 100%;
   padding: 2rem 1.75rem;
+  position: relative;
   border-radius: var(--border-radius);
   background-color: var(--light-navy);
   transition: var(--transition);
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.folder-icon {
+  color: var(--green);
+  width: 40px;
+  height: 40px;
+}
+
+.project-title {
+  margin: 0px 0px 10px;
+  color: var(--lightest-slate);
+  font-size: var(--fs-xxl);
+  line-height: 1.1 !important;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card:hover .project-title {
+  color: var(--green);
+}
+
+.project-tech-list {
+  display: flex;
+  gap: 2rem;
+  color: var(--slate);
+}
+
+.project-tech-list li {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
 }
 
 @media screen and (min-width: 614px) {

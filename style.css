@@ -63,13 +63,16 @@ section {
   }
   section {
     padding-top: 100px;
-    min-height: 100vh;
   }
 }
 
 @media screen and (min-width: 1080px) {
   main {
     padding-inline: 150px;
+  }
+  section {
+    padding-top: 100px;
+    min-height: 100vh;
   }
 }
 
@@ -187,7 +190,46 @@ h1 {
   }
 }
 
+/* project section styles */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  border-radius: var(--border-radius);
+}
 
+.project-card {
+  box-shadow: 0 10px 30px -15px var(--navy-shadow);
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  height: 100%;
+  padding: 2rem 1.75rem;
+  border-radius: var(--border-radius);
+  background-color: var(--light-navy);
+  transition: var(--transition);
+}
+
+@media screen and (min-width: 614px) {
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    border-radius: var(--border-radius);
+  }
+}
+@media screen and (min-width: 1230px) {
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    border-radius: var(--border-radius);
+  }
+}
 
 /* Contact section style */
 #contact {

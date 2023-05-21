@@ -2,7 +2,7 @@ export default function Projects() {
   return (
     <section id="projects">
       <h2 className="number section-heading text-lightest-slate mb-200">
-        Other Noteworthy Projects
+        My recent Projects
       </h2>
       <div className="projects-grid">
         <div className="project-card">

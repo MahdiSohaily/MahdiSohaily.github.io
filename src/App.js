@@ -1,24 +1,21 @@
-import Main from './components/Main';
+/* eslint-disable import/no-extraneous-dependencies */
+import { useEffect, useState } from 'react';
 import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Experience from './components/Experience/Experience';
-import Projects from './components/Projects/Projects';
-import Contact from './components/Contact/Contact';
-
+import Main from './components/Main';
 import './style.css';
 
 function App() {
+  const [search, setSearch] = useState('mahdisohaily4030');
+
+  const handleSearch = (result) => {
+    setSearch(result);
+  };
+
+  useEffect(() => {});
   return (
     <>
-      <Header />
-      <Main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-      </Main>
+      <Header search={handleSearch} />
+      <Main search={search} />
     </>
   );
 }

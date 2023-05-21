@@ -15,7 +15,6 @@ export default function Experience() {
             <Tab />
             <Tab />
             <Tab />
-            <Tab />
           </ul>
         </div>
         <div className="content-container">

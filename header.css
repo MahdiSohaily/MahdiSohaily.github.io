@@ -168,3 +168,84 @@ header {
     display: none;
   }
 }
+
+.contact-container {
+  display: none;
+}
+
+.contact-info {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+}
+
+.contact-info::after {
+  content: " ";
+  display: block;
+  height: 90px !important;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: var(--light-slate);
+}
+
+.contact-info.left {
+  left: 20px;
+}
+
+.contact-info.right {
+  right: 20px;
+  align-items: center;
+}
+
+.social-icon-menu li a {
+  display: inline-block;
+  padding: 10px !important;
+}
+
+.social-icon-menu li a:hover .feather {
+  transform: translateY(-3px);
+  transition: var(--transition);
+  color: var(--green);
+}
+
+.feather {
+  width: 20px;
+  height: 20px;
+  color: var(--light-slate);
+}
+
+.email {
+  margin: 20px auto;
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+.email:hover a {
+  display: block;
+  transform: translateY(-3px);
+  transition: var(--transition);
+  color: var(--green);
+}
+
+@media screen and (min-width: 1080px) {
+  .contact-info.left {
+    left: 40px;
+  }
+
+  .contact-info.right {
+    right: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-container {
+    display: block;
+  }
+}

@@ -8,6 +8,7 @@ export default function About({ person, strengths }) {
   });
 
   const display = skills && skills.map((skill, index) => <li key={index}>{skill}</li>);
+  const bio = person.summaryOfBio.replace(/^a-zA-Z ]/g, '') 
 
   return (
     <section id="about">
@@ -17,7 +18,7 @@ export default function About({ person, strengths }) {
       <div className="inner">
         <div className="bio">
           <div>
-            <p className="text-slate fs-500">{person.summaryOfBio}</p>
+            <p className="text-slate fs-500">{bio}</p>
 
             <p className="text-slate fs-500s">
               Here are a few technologies I’ve been working with recently:

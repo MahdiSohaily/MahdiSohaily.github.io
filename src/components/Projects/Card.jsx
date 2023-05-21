@@ -1,4 +1,7 @@
-export default function Card() {
+/* eslint-disable react/prop-types */
+export default function Card({
+  name, content, toYear, toMonth,
+}) {
   return (
     <div className="project-card">
       <div className="card-heading mb-200">
@@ -34,21 +37,20 @@ export default function Card() {
         </svg>
       </div>
       <div className="card-body">
-        <h3 className="project-title">
-          Integrating Algolia Search with WordPress Multisite
-        </h3>
+        <h3 className="project-title">{name}</h3>
         <div className="project-description">
-          <p className="text-light-slate fs-md">
-            Building a custom multisite compatible WordPress plugin to build
-            global search with Algolia
-          </p>
+          <p className="text-light-slate fs-md">{content}</p>
         </div>
       </div>
       <footer>
         <ul className="project-tech-list">
-          <li>Algolia</li>
-          <li>WordPress</li>
-          <li>PHP</li>
+          <li>
+            {toMonth}
+            {' '}
+            -
+            {' '}
+            {toYear}
+          </li>
         </ul>
       </footer>
     </div>

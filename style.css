@@ -22,6 +22,16 @@ section {
   max-width: 1000px;
 }
 
+.section-heading {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 0px 40px;
+  width: 100%;
+  font-size: clamp(26px, 5vw, var(--fs-heading));
+  white-space: nowrap;
+}
+
 @media screen and (min-width: 481px) {
   main {
     padding-inline: 50px;
@@ -56,6 +66,6 @@ h1 {
   margin: 20px 0px 0px;
   max-width: 540px;
 }
-.info p{
+.info p {
   font-size: 19px;
 }

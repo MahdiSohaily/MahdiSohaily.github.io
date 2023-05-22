@@ -17,18 +17,24 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`https://bio.torre.co/api/bios/${search}`,{
-        headers: {"Access-Control-Allow-Origin": "*"}
+      .get(`https://bio.torre.co/api/bios/${search}`, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers":
+            "Origin, X-Requested-With, Content-Type, Accept",
+        },
       })
       .then((response) => {
         setUser(response.data);
       })
-      .catch((error) => { console.log(error); });
+      .catch((error) => {
+        console.log(error);
+      });
   }, [search]);
   return (
     <>
       <Header search={handleSearch} />
-      {user? <Main user={user} /> : <p>Loading</p>}
+      {user ? <Main user={user} /> : <p>Loading</p>}
     </>
   );
 }

@@ -1,5 +1,3 @@
-/* eslint-disable quotes */
-/* eslint-disable import/no-extraneous-dependencies */
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "./components/Header/Header";
@@ -7,7 +5,6 @@ import Main from "./components/Main";
 import "./style.css";
 
 function App() {
-  // eslint-disable-next-line quotes
   const [search, setSearch] = useState("mahdisohaily4030");
   const [user, setUser] = useState(null);
 

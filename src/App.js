@@ -17,7 +17,9 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`https://bio.torre.co/api/bios/${search}`)
+      .get(`https://bio.torre.co/api/bios/${search}`,{
+        headers: {"Access-Control-Allow-Origin": "*"}
+      })
       .then((response) => {
         setUser(response.data);
       })

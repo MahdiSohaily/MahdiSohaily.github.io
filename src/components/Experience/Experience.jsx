@@ -37,7 +37,7 @@ export default function Experience({ jobs }) {
     />
   ));
   return (
-    <section id="jobs" className="mini-section">
+    <section id="jobs" className="mini">
       <h2 className="number section-heading text-lightest-slate mb-200">
         Where I’ve Worked
       </h2>

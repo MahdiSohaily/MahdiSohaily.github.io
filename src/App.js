@@ -14,13 +14,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`https://bio.torre.co/api/bios/${search}`, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Headers":
-            "Origin, X-Requested-With, Content-Type, Accept",
-        },
-      })
+      .get(`https://bio.torre.co/api/bios/${search}`)
       .then((response) => {
         setUser(response.data);
       })

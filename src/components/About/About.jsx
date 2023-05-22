@@ -8,7 +8,7 @@ export default function About({ person, strengths }) {
   });
 
   const display = skills && skills.map((skill, index) => <li key={index}>{skill}</li>);
-  const bio = person.summaryOfBio.replace(/^a-zA-Z ]/g, '') 
+  const bio = person.summaryOfBio.replace(/[0-9#@&x:;]/g, '');
 
   return (
     <section id="about">

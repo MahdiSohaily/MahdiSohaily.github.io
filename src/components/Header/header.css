@@ -243,6 +243,11 @@ header {
   color: var(--green);
 }
 
+.search,
+.search-btn {
+  display: none;
+}
+
 @media screen and (min-width: 1080px) {
   .contact-info.left {
     left: 40px;
@@ -256,5 +261,36 @@ header {
 @media screen and (min-width: 768px) {
   .contact-container {
     display: block;
+  }
+
+  .search-btn,
+  .search {
+    display: inline-block;
+  }
+
+  .search {
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid var(--dark-slate);
+    margin-inline: 10px;
+    color: var(--light-slate);
+    padding-inline: 10px;
+  }
+
+  .search::placeholder {
+    color: var(--light-slate);
+  }
+  .search:focus {
+    outline: none;
+    border-bottom: 1px solid var(--green);
+    transform: (--transition);
+  }
+  .search-btn {
+    background-color: transparent;
+    color: var(--light-slate);
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
   }
 }

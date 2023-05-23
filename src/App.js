@@ -5,7 +5,8 @@ import Main from "./components/Main";
 import "./style.css";
 
 function App() {
-  const [search, setSearch] = useState("mahdisohaily4030");
+  const [search, setSearch] = useState("mahdisohaily40320");
+  const [error, setError] = useState(false);
   const [user, setUser] = useState(null);
 
   const handleSearch = (result) => {
@@ -13,14 +14,16 @@ function App() {
   };
 
   useEffect(() => {
-    
+    setError(false);
     axios
-      .get(`https://cors-anywhere.herokuapp.com/https://bio.torre.co/api/bios/${search}`)
+      .get(
+        `https://cors-anywhere.herokuapp.com/https://bio.torre.co/api/bios/${search}`
+      )
       .then((response) => {
         setUser(response.data);
       })
       .catch((error) => {
-        console.log(error);
+        setError(true);
       });
   }, [search]);
   return (

@@ -272,6 +272,7 @@ header {
     width: 200px;
     border: none;
     border-bottom: 1px solid var(--dark-slate);
+    background-color: rgba(10, 25, 47, 0.85);
     margin-inline: 10px;
     color: var(--light-slate);
     padding-inline: 10px;

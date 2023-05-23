@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     setError(false);
     axios
-      .get(`http://yadak.center/bio/${search}`)
+      .get(`https://proxy-torre.fly.dev/api/bios/${search}`)
       .then((response) => {
         console.log(response.data);
         setUser(response.data);

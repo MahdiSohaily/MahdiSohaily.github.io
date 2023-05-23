@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     setError(false);
     axios
-      .get(`https://bio.torre.co/api/bios/${search}`)
+      .get(`http://yadak.center/bio/${search}`)
       .then((response) => {
         console.log(response.data);
         setUser(response.data);

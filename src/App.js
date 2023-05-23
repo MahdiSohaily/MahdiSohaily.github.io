@@ -13,8 +13,9 @@ function App() {
   };
 
   useEffect(() => {
+    
     axios
-      .get(`https://bio.torre.co/api/bios/${search}`)
+      .get(`https://cors-anywhere.herokuapp.com/https://bio.torre.co/api/bios/${search}`)
       .then((response) => {
         setUser(response.data);
       })

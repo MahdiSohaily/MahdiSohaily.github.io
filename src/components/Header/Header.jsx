@@ -66,7 +66,14 @@ export default function Header({ search }) {
                 name="search"
                 onChange={(e) => setValue(e.target.value)}
               />
-              <button className="search-btn" type="submit">
+              <button
+                className="search-btn"
+                type="submit"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  submit();
+                }}
+              >
                 <svg
                   version="1.1"
                   id="Layer_1"

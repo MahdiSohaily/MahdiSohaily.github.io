@@ -1,5 +1,5 @@
 export default function About({ person, strengths }) {
-  const level = ['master'];
+  const level = ["master"];
   const skills = strengths.map((item) => {
     if (level.includes(item.proficiency)) {
       return item.name;
@@ -7,8 +7,10 @@ export default function About({ person, strengths }) {
     return false;
   });
 
-  const display = skills && skills.map((skill, index) => <li key={index}>{skill}</li>);
-  const bio = person.summaryOfBio.replace(/[0-9#@&x:;]/g, '');
+  const display =
+    skills && skills.map((skill, index) => <li key={index}>{skill}</li>);
+  const bio =
+    person.summaryOfBio && person.summaryOfBio.replace(/[0-9#@&x:;]/g, "");
 
   return (
     <section id="about">

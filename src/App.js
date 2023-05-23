@@ -18,6 +18,7 @@ function App() {
     axios
       .get(`https://bio.torre.co/api/bios/${search}`)
       .then((response) => {
+        console.log(response.data);
         setUser(response.data);
       })
       .catch((error) => {

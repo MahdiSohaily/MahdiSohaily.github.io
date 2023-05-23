@@ -3,6 +3,7 @@ import "./header.css";
 
 export default function Header({ search }) {
   const nav = useRef();
+  const input = useRef();
 
   const [value, setValue] = useState();
 
@@ -15,6 +16,7 @@ export default function Header({ search }) {
   };
 
   const submit = () => {
+    input.current.value = null;
     search(value);
   };
   return (
@@ -67,6 +69,7 @@ export default function Header({ search }) {
             >
               <input
                 className="search"
+                ref={input}
                 placeholder="Search for a user"
                 type="text"
                 name="search"
